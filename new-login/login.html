@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <nav class="site-navbar z-depth-0 grey darken-2 site-navbar-target sidenav-trigger">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">
+
+
+                <!--<img src="img/logo.svg" style="width: 180px; margin-top: 10px;">-->
+                <h5>your logo
+
+                </h5>
+
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li>
+                    <a class="grey-text" href="#home-section">Home</a>
+                </li>
+
+
+                <li class="logged-in">
+                    <a href="#" class="grey-text" id="logout">Logout</a>
+                </li>
+
+
+                <!--<li class="logged-in">
+                            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Guide</a>
+                        </li>-->
+
+                </span>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <form id="login-form" action="login.html" class="box" method="post">
+        <h4>Login</h4>
+        <input type="email" placeholder="Email" id="login-email">
+        <input type="password" placeholder="Password" id="login-password">
+        <input type="submit" value="Login">
+
+
+        <h5>Don't have an account? <a href="signup.html">Signup</a></h5>
+
+    </form>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.2/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB7E0K2uNh-JMyvKlBK3pCSe9aT-ov9KXc",
+            authDomain: "tourexpo7.firebaseapp.com",
+            databaseURL: "https://tourexpo7.firebaseio.com",
+            projectId: "tourexpo7",
+            storageBucket: "tourexpo7.appspot.com",
+            messagingSenderId: "470684026127",
+            appId: "1:470684026127:web:02db09313bf34966576a7a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+    <script src="scripts/auth.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
